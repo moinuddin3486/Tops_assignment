@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" name="moin">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="">Age</label>
+        <input type="number" name="age" id="age"><br><br>
+        <label for="">Gender :</label>
+        <input type="radio" name="gender" id="gender" value="male">Male
+        <input type="radio" name="gender" id="gender" value="female">Female <br><br>
+        <input onclick="save_data()" type="button" name="button" id="save" value="Submit">
+    </form>
+    <table border="2" >
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>Name</td>
+                <td>Age</td>
+
+            </tr>
+            <tbody id="fetch_data"></tbody>
+        </thead>
+    </table>
+    <script>
+        let user_data=[]
+        // user_data.length
+        const save_data=()=>{
+            let all_data=JSON.parse(localStorage.getItem("user_data"))
+            let id=all_data!=null ? all_data.length+1:1
+            let name=document.getElementById("name").value
+            let age=document.getElementById("age").value
+            let gender=document.getElementById("gender").value
+            let obj={
+                id:id,
+                name:name,
+                age:age,
+                gender:gender
+            }
+            user_data.push(obj)
+
+            localStorage.setItem("user_data",JSON.stringify(user_data))
+            show_data()
+            document.moin.reset()
+            
+        }
+        // console.log(JSON.parse(localStorage.getItem("user_data")));
+        let show_data=()=>{
+            let g_data=JSON.parse(localStorage.getItem("user_data"))
+            console.log(g_data);
+            g_data.map((i)=>{
+            document.getElementById("fetch_data").innerHTML+=`
+            <tr>
+                <td>${i.id}</td>
+                <td>${i.name}</td>
+                <td>${i.age}</td>
+
+            </tr>`
+        })
+        }
+        
+        
+        
+        
+        
+        
+        // localStorasge.clear()
+        
+    </script>
+</body>
+</html>

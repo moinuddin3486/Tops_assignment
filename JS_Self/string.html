@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name="moinuddin"
+        var age=23
+
+        document.write(`hello my namw is ${name} and my age is${age}`)
+        var str="Moinuddin"
+        document.write('<br>lenght of str:'+str.length) //lenght 1 thi chalu thase
+        document.write('<br>lenght of str:'+str.toUpperCase())
+        document.write('<br>lenght of str:'+str.toLowerCase())
+        document.write('<br>lenght of str:'+str.charAt(8)) //index 0 thi chalu thase
+        document.write('<br>lenght of str:'+str.endsWith('n'))
+        document.write('<br>lenght of str:'+str.indexOf('m'))
+        var mmm=name.substring(0,4)
+        document.write('<br> new str='+mmm)
+        var mmm=name.slice(-9,9) // ama python ni jem ending point minus ma work nathi kartu  
+        document.write('<br>String Slicing ='+mmm)
+        var a="   moin   "
+        document.write('<br>Normal print='+a)
+        document.write('<br>Trim Function='+a.trim())
+        var a="Moinuddin"
+        a=a.replace("ddin",'$$$')
+        document.write('<br>Replace String ='+a)
+        a="https\moinuddin%20.com"
+        a=a.replace("%20","-")
+        document.write('<br>replace String=='+a)
+        document.write('<br>Inluded Word=='+a.includes("https"))
+        
+        // convert string into array
+
+        a="moin,momin,dholka,amd,guj"
+        // document.write('<br>Convert str unto array=='+a.split(","))
+        var a="moinuddinn"
+         document.write('<br>print in bold=='+a.bold())
+         document.write('<br>'+a.small())
+         document.write('<br>'+a.big())
+         document.write('<br>'+a.lastIndexOf())
+        var s="Tops Technologies"
+        document.write('<br>'+a.concat(s).toUpperCase())
+        // document.write('<br> equal=='+a.localeCompare(s))
+        document.write('<br>repeat=='+a.replace("ddinn","&&"))
+        var z="moin"
+        var age=23
+        document.write(`<br>My name is ${name}and my age is ${age}`)
+        let xx="suhana"
+        s=xx.replace("ana","999999")
+        document.write('<br>'+s)
+
+
+        
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- First string letter repeating print -->
+     <script>
+        //  let s="loveleetcode"
+        let s="leetcode"
+
+        let count=0
+        let e_str=""
+        
+        for (let i = 0; i < s.length; i++) {
+              
+              for (let m = 0; m < s.length; m++) {
+                if(s[i]===s[m]){ 
+                    count++  
+                }}
+                if(count==1){
+                    e_str+=s[i]
+                    break
+                }
+                
+                
+            count=0
+            
+        }
+        // console.log(e_str);
+        document.write('<br>'+e_str)
+
+     </script>
+    
+</body>
+</html>

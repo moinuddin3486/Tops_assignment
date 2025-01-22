@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5]
+        let res = arr.reduce((i,j)=>{
+            return i+j //1+2 = 3
+        })
+        console.log("total is "+res);
+        let arr2 = [23,34,45,5,12,66]
+        let ans = arr2.reduce((curr,max)=>{ 
+            if(curr>max){ //45>5
+                max = curr
+            }
+            return max
+        })
+        console.log(ans);
+        let arr3 = ["abc","xyz","abc","pqr","xyz","jkl","abc"]
+        let answer = arr3.reduce((a,b)=>{
+            if(!a[b]){ //{abc}
+                a[b] = 1 //{ abc:3,xyz:2,pqr:1,jkl:1}
+            } else {
+                a[b]++
+            }
+            return a
+        },{})
+        console.log(answer);
+        
+        // {
+        //     abc:1,
+        //     xyz:1,
+        //     pqr:1
+        //     jkl:1
+        // }
+    </script>
+</body>
+</html>

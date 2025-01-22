@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let num=[1,2,3]
+        // let newnum=num.reduce((accumlator,currentvalue)=>{
+        //     document.write(`<br>Accumlator: ${accumlator} currentvalue : ${currentvalue}`)
+        //     return accumlator+currentvalue
+
+        // },0)
+        // document.write('<br>'+newnum)
+        let shopingCart = [
+            {
+                course: "Python",
+                price: 1299
+            },
+            {
+                course: "Java",
+                price: 2199
+            },
+            {
+                course: "c++",
+                price: 1889
+            },
+            {
+                course: "Mobile Development",
+                price: 5999
+            },
+            {
+                course: "Datascience",
+                price: 12999,
+                gen:2
+                
+            },
+            {
+                course: "Datascience",
+                price: 12999,
+                gen:5
+            },{
+                course: "Datascience",
+                price: 12999,
+                gen:9
+            },
+        ]
+
+        // let sum_price=shopingCart.reduce((acum,curva)=>(acum+curva.price),0)
+        let new_price=shopingCart.filter((i)=> {
+            if(i.course=="Datascience" && gen>2){
+                return i.course
+            }
+        }).reduce((acum,m)=>{
+            return acum+m.price
+        },0)
+        document.write('<br>'+new_price)
+    </script>
+</body>
+
+</html>

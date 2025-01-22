@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const pro=new Promise((resolve,reject)=>{
+        //     setTimeout(() => {
+        //         document.write('<br>Asyn task is compeleted')
+        //         resolve()
+        //     }, 2000);
+
+        // })
+        // pro.then(()=>{
+        //     document.write('<br>promises called')
+        // })
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                document.write('<br>Async task 2')
+                resolve()
+            }, 2000);
+        }).then(() => {
+            document.write('<br>Completed')
+        })
+
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                document.write('<br>promises called')
+                resolve()
+            }, 2000);
+        }).then(() => {
+            document.write('<br>then item called')
+        })
+
+        let four_promises = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({
+                    name: "moin",
+                    age: 22,
+                    city: "dholka"
+                })
+            }, 2000);
+        })
+        four_promises.then((user) => {
+            console.log(user)
+
+        })
+
+        const error_promises = new Promise((resolve, reject) => {
+            setInterval(() => {
+                let error = true
+                if (!error) {
+                    resolve({ name: "nathi", password: "Moinuddin@123" })
+                } else {
+                    reject("Some thing want wrong")
+                }
+            }, 2000);
+        })
+        error_promises.then((user) => {
+            return user.name
+
+        })
+        .then((user) => {
+            document.write('<br>user:' + user)
+        })
+        .catch((user) => {
+            console.log(user);            
+        })
+        
+        .finally(()=>{
+            console.log("finallu block always resolved.....");
+            
+        })
+    </script>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=new Promise((resolve,reject)=>{
+            let error=true
+            if(error){
+                resolve("Error mali chhe")
+            }
+            else{
+                reject("error nathi mali.. ")
+            }
+
+        })
+        .then((msg)=>{
+            document.write('<br> then msg'+msg)
+            console.log(msg);
+            
+        })
+        .catch((msg)=>{
+            document.write('<br>'+msg)
+        })
+        .finally(()=>{
+            document.write('<br>finalyy')
+        })
+    </script>
+</body>
+</html>

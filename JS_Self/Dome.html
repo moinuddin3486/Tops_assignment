@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="username" id="username" value="Test1234">
+    <div id="demo">hello</div>
+    <p class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque repellendus autem, cumque consequatur minima officia iusto dolores numquam! Necessitatibus exercitationem accusantium sequi explicabo sapiente vitae doloribus, harum magnam commodi in.</p>
+    <p class="box">hello hi</p>
+    <p class="box">jkgdfjkgh dkjfhgkdfjgh</p>
+    <p class="box">jkgdfjkgh testt dkjfhgkdfjgh</p>
+    <img src="" alt="" height="100px" width="300px" id="domimg">
+    <script>
+        //set value
+        document.getElementById("username").value="ABCd"
+       //get value
+        let a = document.getElementById("username").value
+        console.log("textbox value is "+a);
+        document.getElementById("demo").style.color = "blue" 
+        document.getElementById("demo").style.backgroundColor = "yellowgreen" 
+//getElementsByTagName
+//getElementsByName
+//getElementsByClassName
+        let pr = document.getElementsByName("username")
+        console.log(pr);
+        
+        for(let i=0;i<pr.length;i++){
+            if((i+1)%2==0){
+                pr[i].style.color = "brown"
+
+            } else {
+                pr[i].style.color = "pink"
+
+            }
+        }
+        document.getElementById("domimg").src = "https://media.licdn.com/dms/image/v2/D4E12AQEwM6eSxgooHA/article-inline_image-shrink_1000_1488/article-inline_image-shrink_1000_1488/0/1691686104974?e=2147483647&v=beta&t=4nOf6MMm8lMI2RrP8q5c6hgm0I2bqNHFYJNox2wde-A"
+        document.getElementById("domimg").style.height = "300px"
+        
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="patel">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <h1 class="hd">Moinuddin</h1>
+    <h3 class="moin">mooo</h3>
+    <input type="text" id="ss" value="example">
+
+    <script>
+        // let m=document.getElementsByTagName("li")
+        // for(let i=0;i<m.length;i++){
+        //     m[i].style.color="red"
+        // }
+
+        // let k=document.getElementsByTagName("h1")
+        // console.log(k);
+        // k[0].style.color="red"
+       document.getElementById("patel").style.color="red"
+    //    document.getElementsByClassName("hd").style.color="red"
+    
+    // document.getElementsByClassName("hd").style.color="red"
+    let dd=document.getElementsByClassName("moin")
+    console.log(dd);
+    dd.style.color="red"
+    // document.getElementsByid("ss").style.color="red"
+    document.getElementById("ss").style.color="red"
+
+    
+
+    
+
+        
+       
+    </script>
+         
+    </script>
+</body>
+</html> -->
+

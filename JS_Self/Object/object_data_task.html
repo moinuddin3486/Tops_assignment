@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="ord" id="ord" onchange="Sort_data(this)">
+        <option value="">select</option>
+        <option value="asd">Ascending</option>
+        <option value="dsc">descending</option>
+    </select><br><br>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+
+            </tr>
+        </thead>
+        <tbody id="t_data">
+            
+        </tbody>
+    </table>
+
+    <script>
+        let a = [
+            {
+                id:101,
+                name:"Test",
+                age:26
+            },
+            {
+                id:102,
+                name:"Abc",
+                age:24
+            },
+            {
+                id:103,
+                name:"Pqr",
+                age:28
+            },
+            {
+                id:104,
+                name:"Afdgdg",
+                age:18
+            },
+            {
+                id:105,
+                name:"pqrt",
+                age:24
+            }
+        ]
+        let all_data=""
+
+        for (const element of a) {
+            all_data+=`
+            <tr>
+                <td>${element.id}</td>
+                <td>${element.name}</td>
+                <td>${element.age}</td>
+            </tr>`
+        }
+        document.getElementById("t_data").innerHTML=all_data
+
+    
+        let Sort_data=(k)=>{
+           
+           if(k.value=="asd"){
+            a.sort((a,b)=> a.age-b.age)
+            
+           }
+           else if(k.value=="dsc"){
+            a.sort((a,b)=> b.age-a.age)
+            
+           }
+           else{
+            a.sort((a,b)=>a.id-b.id)
+           }
+           a
+           all_data=""
+           for(const mm of a) {
+            all_data+=`
+                <tr>
+                <td>${mm.id}</td>
+                <td>${mm.name}</td>
+                <td>${mm.age}</td>
+                </tr>`}
+           document.getElementById("t_data").innerHTML=all_data
+        }
+    </script>
+</body>
+</html>
+
+<!-- // same task on click button -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //this keyword- current value or current object point  -->
+    <!-- <select name="ord" id="ord" onchange="sortData(this)">
+        <option value="">--Select order--</option>
+        <option value="asc">Ascending</option>
+        <option value="desc">Decending</option>
+    </select>
+    <br><br><br>
+    <table border="2"> -->
+        <!-- <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="alluser"></tbody>
+    </table>
+
+    <script>
+        let a = 10
+        let arr = ["abc",25,"dfgdf",25000]
+        let obj = {
+            "name":"abc",
+            "age":25,
+            "salary":25000
+        }
+        console.log("Name is "+obj['name']); 
+        console.log("Age is "+obj.age);
+        for(var x in obj){
+        //    document.write('<br>'+x+' is '+obj[x])           
+        }
+        
+        let txt = ''
+        //array of object
+        let user = [
+            { -->
+                <!-- "id":101,
+                "name":"Test",
+                "age":26
+            },
+            {
+                "id":102,
+                "name":"Abc",
+                "age":24
+            },
+            {
+                "id":103,
+                "name":"Pqr",
+                "age":28
+            },
+            {
+                "id":104,
+                "name":"Afdgdg",
+                "age":18
+            },
+            {
+                "id":105,
+                "name":"pqrt",
+                "age":24
+            }
+        ]
+        let newuser = user.map((i)=>{
+                return i
+        }) -->
+        <!-- let res = user.map((i)=>{
+            //template literal
+            txt += `<tr>
+                        <td>${i.id}</td>
+                        <td>${i.name}</td>
+                        <td>${i.age}</td>
+                    </tr>`
+            // txt += "<tr>"
+            // txt += "<td>"+i.id+"</td>"
+            // txt += "<td>"+i.name+"</td>"
+            // txt += "<td>"+i.age+"</td>"
+            // txt +="</tr>"            
+        })
+        document.getElementById("alluser").innerHTML = txt
+
+        // Sorting data
+        const sortData = (a)=>{
+            let order = a.value;
+            if(order=="asc"){
+                user.sort((a,b)=>{
+                    return a.age-b.age
+                })
+                           
+            } else if(order=="desc"){
+                user.sort((a,b)=>{
+                    return b.age-a.age
+                })
+                console.log(user);
+
+            } else {
+                console.log(newuser );
+                
+                user = newuser
+            }
+            txt = ''
+            res = user.map((i)=>{
+            //template literal
+            txt += `<tr>
+                        <td>${i.id}</td>
+                        <td>${i.name}</td>
+                        <td>${i.age}</td>
+                    </tr>`})
+            document.getElementById("alluser").innerHTML = txt
+            
+        }
+    </script>
+</body>
+</html> -->

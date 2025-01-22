@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Falsy Value = 0,-0,BigInt 0n,"",null,undefined,NaN
+        // Truthy Value = "0","false"," ",[],{},function(){},
+
+
+        // let email="Moin@123"
+        // let email=""  empty string ne false manvama avse
+        // let email=[]    empty array ne true manvama avse
+        // let email=[]
+
+
+
+        // if(email){
+        //     document.write('<br>Yes User Have Email')
+        // }else{
+        //     document.write('<br>Does Not Have Email')
+        // }
+// ==========================================
+        // // array ne condition ma check karva mate
+        // let ar=[]
+        // if(ar.length===0){
+        //     document.write('<br>Array Is Empty')
+        // }else{
+        //     document.write('<br>Array Not Empty')
+        // }
+
+        // array ne condition ma check karva mate
+        // =======================================
+    //     let ob={}
+    //    if(Object.keys(ob).length===0){
+    //     document.write('<br>Object Is empty')
+    //    }else{
+    //     document.write('<br>Object is not empty')
+    //    }
+
+    document.write('<br>'+(""==0))
+    document.write('<br>'+(""==false))
+    document.write('<br>'+(0==""))
+    
+    var a= null ?? 22
+    // var a= undefined ?? 22
+    // var a= 10 ?? 22
+
+    document.write('<br>'+a)
+    document.write('<br>'+((2>1)?"yes":"no"))
+    </script>
+</body>
+</html>

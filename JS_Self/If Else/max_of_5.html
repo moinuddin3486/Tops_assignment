@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("Enter value of a :"))
+        var b = parseInt(prompt("Enter value of b :"))
+        var c = parseInt(prompt("Enter value of c :"))
+        var d = parseInt(prompt("Enter value of d :"))
+        var e = parseInt(prompt("Enter value of e :"))
+        document.write('<br>A is = '+a)
+        document.write('<br>B is = '+b)
+        document.write('<br>C is = '+c)
+        document.write('<br>D is = '+d)
+        document.write('<br>E is = '+e)
+
+
+        if (a > b) {
+            if (a > c) {
+                if (a > d) {
+                    if (a > e) {
+                        document.write('<br><br>A is Max : ' + a)
+                    } else {
+                        document.write('<br><br>E is Max : ' + e)
+
+                    }
+                } else {
+                    if (d > e) {
+                        document.write('<br><br>D is Max : ' + d)
+
+                    }
+                    else {
+                        document.write('<br><br>E is Max : ' + e)
+
+                    }
+
+                }
+
+            } else {
+                if (c > d) {
+                    if (c > e) {
+                        document.write('<br><br>C is Max : ' + c)
+
+                    } else {
+                        document.write('<br><br>C is Max : ' + c)
+
+                    }
+                } else {
+                    if (d > e) {
+                        document.write('<br><br>D is Max : ' + d)
+
+                    }
+                    else {
+                        document.write('<br><br>E is Max : ' + e)
+
+                    }
+
+                }
+
+            }
+
+        } else {
+            if (b > c) {
+                if (b > d) {
+                    if (b > e) {
+                        document.write('<br><br>B is Max : ' + b)
+                    }
+                    else {
+                        document.write('<br><br>E is Max : ' + e)
+                    }
+                } else {
+                    if (d > e) {
+                        document.write('<br><br>D is Max : ' + d)
+                    } else {
+                        document.write('<br><br>E is Max : ' + e)
+
+                    }
+                }
+            } else {
+                if (c > d) {
+                    if (c > e) {
+                        document.write('<br><br>c is Max : ' + c)
+
+                    } else {
+                        document.write('<br><br>E is Max : ' + e)
+
+                    }
+
+                } else {
+                    if (d > e) {
+                        document.write('<br><br>D is Max : ' + d)
+
+
+                    }
+                    else {
+                        document.write('<br><br>E is Max : ' + e)
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

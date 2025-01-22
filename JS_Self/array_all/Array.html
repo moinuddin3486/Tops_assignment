@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // array type ma object avse
+        var a=[1,2,3,4,5,6,7,8,9]
+        
+        document.write('<br>'+a.pop()) // remove Last Element
+        document.write('<br>'+a)
+        document.write('<br>'+typeof a)
+        document.write('<br>'+a)
+        document.write('<br>'+a.length)
+        a.push(10)
+        document.write('<br>'+a)
+        // document.write('<br>'+a.reverse())
+
+        a.unshift(11)  // array na start ma add thse
+        document.write('<br>'+a) 
+        document.write('<br>'+a.shift())// First Element Remove Karva mate
+        document.write('<br>'+a.includes(102))
+        document.write('<br>'+a.indexOf(10)) 
+        
+
+        var b = a.join() // join function array bind na sathe sathe string ma convert karse
+
+        // slice ma normal python ni jem chhe 
+        //  splice ma jetlu splicing thayu hase etlu array mathi cute thai jase
+        // var a=[1,2,3,4,5,6,7]
+        var b=[1,2,3,4,5,6,7]
+        document.write('<br> A Slice='+a.slice(1,4))
+        document.write('<br>A='+a)
+        document.write('<br>B Splice='+b.splice(1,4))
+        document.write('<br>B='+b)
+        
+        var k=b.splice(1,4)
+        
+        
+       
+
+
+
+        // document.write('<br>'+typeof a)
+        // document.write('<br>'+typeof b)
+
+
+        // var a=[1,2,20000,3,333,4,5]
+        // var b =[2,3,4,5,6,6]
+        // var d=[909,88,77,66,]
+        // document.write('<br>'+a.join("-"))
+        // document.write('<br>'+typeof a.join("-"))
+        // document.write('<br>'+a.pop())
+       
+    //    document.write('<br>'+a.unshift(89))
+    // var t=a.unshift(333)
+    // document.write('<br>'+t)
+    // delete a[4]
+    // document.write('<br>'+a[4]) // undefine avse delete thaylu hase e
+    // document.write('<br>'+a.length)// lenght ma lai farak nai pade khas jovu
+//    var c=a.concat(b,d) // murge array concate methods
+   
+//    document.write('<br>'+c)
+//    document.write('<br>Asending order='+a.sort())
+//    document.write('<br>descending order='+a.sort().reverse())
+//    document.write('<br>'+c)
+// a=[1,22,33,3000,1,22,5,77,88,6,6,8]
+// function Compare(a,b){
+//     return a-b //ascending orders
+//     // return b-a// dscending order
+// }
+// document.write('<br>'+a.sort(Compare))
+// let num =[1,2,3,4,5,6,7,8]
+// var del=num.splice(1,4,10,20,30,40,) 
+// document.write('<br>'+num)
+// document.write('<br>Deleted Value ='+del)
+
+// var a=[1,2,3,4,5]
+// var a="Topstech"
+// document.write('<br>'+a)
+// document.write('<br>'+ a.substring(0,a.length-1))
+
+
+
+// document.write('<br>'+a.substring(0,a.lenght-1))
+
+// let a=[1,2,1,22,33,4,66]
+// document.write('<br>real array=='+a)
+// document.write('<br>'+a.indexOf(22))
+// document.write('<br>'+a.includes(88))
+// let b=["BRD","AMD","Tops"]
+// document.write('<br>'+a.join("_"))
+// document.write('<br>'+a.slice(1,5))
+// a.slice(1,5)
+// a.splice(1,5)
+// document.write('<br>'+a)
+// let k=a.filter((i)=>i>3)
+// document.write('<br>'+k)
+
+
+let arr=[10,20,30,40]
+
+// arr.splice(2,0)
+arr.splice(2,1) // remove for specific element in array
+// 0 means kasu delete nai thay
+// 1 means je index number chhe te element delete thai jase
+document.write('<br>After remove array : '+arr)
+</script>
+
+</body>
+</html>

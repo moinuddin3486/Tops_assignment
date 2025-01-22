@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // spread operator no use array ni copy create karva mate athva to 
+        // array ne marge karva mate thay chhe 
+
+        // // remain of operator no use first ek thva ekthi vadhar element melavvamate thay chhe 
+        // let a=[1,2,3,4,5]
+        let b=[10,20,30,40,50]
+        // let c=[...a,...b]
+        // this is rest of operator 
+        const [x,y,...z]=b
+        document.write('<br>'+x)
+        document.write('<br>'+y)
+        document.write('<br>'+z) 
+        document.write('<br>'+a)  
+        
+    //     let a={
+    //         name:"Moin",
+    //         age:22,
+    //         city:"Dholka"
+    //     }
+    //     let b={
+    //         name:"sahn",
+    //         age:45,
+    //         city:"DHolka",
+    //         ama:"AMD"
+    //     }
+        
+    //    let {name,age,city,ama}=b //am karvathi direct name thi call thase 
+    //    document.write('<br>'+name)
+    //    document.write('<br>'+age)
+    //    document.write('<br>'+ama)
+    // //    document.write('<br>'+l)
+
+    // let sum=(...num)=> num.reduce((i,m)=>i+m)
+    // document.write('<br>The Sum Of All Is '+sum(...a))
+
+    // // Banne method thi thase
+
+    // let cum=(a,b,c,d,e)=> a+b+c+d+e
+    // document.write('<br>The Sum Of All Is '+sum(...a))
+
+    
+        
+    </script>
+</body>
+</html>

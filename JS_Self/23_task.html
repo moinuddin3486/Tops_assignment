@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="ord" id="ord">
+        <option value="">----select order----</option>
+        <option value="asc" onclick="asd()">ascending</option>
+        <option value="dsc">descending</option>
+
+        
+    </select>
+    <button onclick="asd()">ass</button>
+    <button onclick="dsd()">dess</button>
+
+    
+    <br><br><br>
+    <table border="4" >
+        <thead></thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Age</td>
+
+        </tr>
+        <tbody id="Data" ></tbody>
+    </table>
+    
+    <script>
+        let all_data=""
+        function asd(){
+            let all_data=""
+            for (let key of a.sort((a,b)=> b.age-a.age)) {
+            all_data+=`<tr>
+                <th>${key.id}</th>
+                <th>${key.name}</th>
+                <th>${key.age}</th>
+                </tr>`    
+        }
+        document.getElementById("Data").innerHTML=all_data
+        }
+        function dsd(){
+            let all_data=""
+            for (let key of a.sort((a,b)=> a.age-b.age)) {
+            all_data+=`<tr>
+                <th>${key.id}</th>
+                <th>${key.name}</th>
+                <th>${key.age}</th>
+                </tr>`    
+        }
+        document.getElementById("Data").innerHTML=all_data
+        }
+       
+        let a=[{id:101,
+            name:"abc",
+            age:44},
+            {id:102,
+            name:"lmn",
+            age:12},
+            {id:103,
+            name:"xyz",
+            age:28},
+            {id:104,
+            name:"tdp",
+            age:34},
+        ]
+        
+       
+        // console.log(all_data);
+       
+            for (let key of a.sort((a,b)=> a.age-b.age)) {
+            all_data+=`<tr>
+                <th>${key.id}</th>
+                <th>${key.name}</th>
+                <th>${key.age}</th>
+                </tr>`   
+            } 
+            document.getElementById("Data").innerHTML=all_data
+       
+        
+    </script>
+</body>
+</html>

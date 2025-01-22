@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 350px;
+            width: 200px;
+            padding: 20px;
+
+            border: 3px solid black;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            gap: 10px;
+            flex-direction: column;
+            font-size: 20px;
+            background-color:burlywood;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+            
+        }
+        .main > input{
+            height: 30px;
+            width: 160px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color:wheat;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Result</h1>
+       TOTAL  <input type="text" id="total" readonly>
+      PERCENTAGE  <input type="text" name="" id="per" readonly>
+      GRADE <input type="text" name="" id="grade" readonly>   
+    </div>
+    <script>
+        let maths=parseInt(prompt("Enter your Maths Marks "))
+        let science=parseInt(prompt("Enter your Maths Marks "))
+        let english=parseInt(prompt("Enter your Maths English "))
+        let total=maths+science+english
+        let per=total/3
+       
+        
+        
+        
+        document.getElementById("total").value=total
+        document.getElementById("per").value=per.toFixed(2)
+       
+        if(per>90 && per<=100){
+            // document.write('<br>A Grade...')
+            document.getElementById("grade").value="A Grade"
+
+
+        }
+        else if(per>80 && per<=90){
+            // document.write('<br>B Grade...')
+            document.getElementById("grade").value="B Grade"
+
+        }
+        else if(per>70 && per<=80){
+            // document.write('<br>C Grade...')
+            document.getElementById("grade").value="C Grade"
+
+        }
+        else if(per>50 && per<=70){
+            // document.write('<br>D Grade...')
+            document.getElementById("grade").value="D Grade"
+        }
+        else if(per>40 && per<=50){
+            // document.write('<br>Just Pass Class...')
+            document.getElementById("grade").value="Just Pass Class"
+
+        }
+        else{
+            document.getElementById("grade").value="Fail"
+
+            // document.write('<br>Fail')
+        }
+    </script>
+    
+</body>
+</html>

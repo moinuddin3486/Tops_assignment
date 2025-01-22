@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        var course={
+            name:"Full stack",
+            location:"iscon",
+            courseTeacher:"Rinkal mam..",
+            courseDuration:"14 Month"   
+        }
+        const{courseDuration}=course
+        const {courseTeacher:mm}=course // ama ek ni ek vastu multi time use karvama ave to ane avi ritthi short ma call karavi
+        // ans short name pan apisakay 
+        document.write('<br>'+mm)
+        document.write('<br>'+courseDuration)
+        document.write('<br>'+course.name) // this normal way to print 
+        var {location:loc}=course
+        document.write('<br>'+loc) 
+      
+     </script>
+</body>
+</html>

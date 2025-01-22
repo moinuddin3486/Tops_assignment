@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write('<br>==========use in nested array of objct==========')
+        let arr = [
+            { name: "moin", age: 21 }, { name: "sahnavaz", age: 26 }, { name: "naim", age: 41 }, { name: "aves", age: 17 }, { name: "ayaz", age: 8 }, { name: "gulam", age: 16 },
+        ]
+        // let mm = arr.filter((i) => i.age >= 25)   
+        let mm = arr.filter((i) => (i.age >= 25 ))
+
+        console.log(mm);
+        
+        document.write('<br>============use In string of array===========')
+        let aa=["Moin","Suhana","kasim","moinuddin","momin"]
+        let new_array=aa.filter((i)=>{
+            return i.startsWith("m")||i.startsWith("S")
+        })
+   </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        } */
+        .box{
+            height: 300px;
+            width: 450px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: cadetblue;
+            /* animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: 2; */
+            
+           
+
+        }
+        input{
+            height: 40px;
+            width: 380px;
+            border: 2px dotted red;
+            font-size: 20px;
+            background-color: tan;
+            outline: none; 
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            font-size: 20px;
+            color: white;
+            background-color: tomato;
+        }
+        .hed{
+            height: 40px;
+            width: 450px;
+            text-align: center;
+            font-size: 30px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="hed"><h3>Calculator</h3></div>
+    <div class="box">
+        <input type="number" id="main-1" placeholder="Enter First Vale A"><br>
+        <input type="number" id="main-2" placeholder="Enter Second Value B"><br>
+        <input type="number" id="main-3" readonly placeholder="Answer"><br>
+        
+        
+       <div class="btn">
+        
+        <button type="button" onclick="add()">+</button>
+        <button type="button" onclick="minus()">-</button>
+        <button type="button" onclick="into()">*</button>
+        <button type="button" onclick="devid()">/</button>
+        <button type="button" onclick="modulo()">%</button><br>
+        <button type="button" onclick="dell_a()">dell A</button>
+        <button type="button" onclick="dell_b()">Dell B</button>
+        <button type="button" onclick="ac()" id="ac">AC</button>
+        
+       </div>
+        
+    </div>
+    <script>
+        function dell_a(){
+            var a=String(document.getElementById("main-1").value)
+            var b=a.substring(0,a.length-1)
+            document.getElementById("main-1").value=b
+        }
+        function dell_b(){
+            var a=String(document.getElementById("main-2").value)
+            var b=a.substring(0,a.length-1)
+            document.getElementById("main-2").value=b
+        }
+        // function add()
+        // {
+        //     var a=document.getElementById("main-1").value
+        //     var b=document.getElementById("main-2").value
+        //     var c=a+b
+        //     document.getElementById("main-3").value=c
+
+            
+        // }
+        function add()
+        {
+            var a=Number(document.getElementById("main-1").value)
+            var b=Number(document.getElementById("main-2").value)
+            var c=a+b
+            document.getElementById("main-3").value=c
+        }
+        function minus()
+        {
+            var a=Number(document.getElementById("main-1").value)
+            var b=Number(document.getElementById("main-2").value)
+            var c=a-b
+            document.getElementById("main-3").value=c
+        }
+        function into()
+        {
+            var a=Number(document.getElementById("main-1").value)
+            var b=Number(document.getElementById("main-2").value)
+            var c=a*b
+            document.getElementById("main-3").value=c
+            
+        }
+        function devid()
+        {
+            var a=Number(document.getElementById("main-1").value)
+            var b=Number(document.getElementById("main-2").value)
+            var c=a/b
+            document.getElementById("main-3").value=c  
+        }
+        function modulo()
+        {
+            var a=Number(document.getElementById("main-1").value)
+            var b=Number(document.getElementById("main-2").value)
+            var c=a%b
+            document.getElementById("main-3").value=c
+        }
+        function ac()
+        {
+            document.getElementById("main-1").value=""
+            document.getElementById("main-2").value=""
+            document.getElementById("main-3").value="" 
+        }
+    </script>
+    
+    
+
+
+    
+    
+</body>
+</html>

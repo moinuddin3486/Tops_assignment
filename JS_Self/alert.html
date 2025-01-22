@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="alert.js"></script> -->
+</head>
+
+<body>
+    <script>
+        // let a = "moin"
+        // // alert("Hello"+a)
+        // alert(`Hello ${a}`)
+        // // alert("hello"+a)
+        let a=[
+            {
+                id:1,
+                name:"moin",
+                age:22
+            },
+            {
+                id:2,
+                name:"suhana",
+                age:28
+            },
+            {
+                id:3,
+                name:"sajeed",
+                age:67
+            }
+        ]
+        let qs=4
+       
+       let ans= a.find((i)=>{
+            return qs==i.id
+       })
+        // document.write('<br>'+ans)
+        console.log(ans);
+        
+        
+        
+    </script>
+
+</body>
+
+</html>

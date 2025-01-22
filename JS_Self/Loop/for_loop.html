@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for loop is entry control loop
+        // for(let i=1,k=10;i<=10,k>=1;i++,k--){
+        //     document.write('<br>i='+i)
+        //     document.write('<br>k='+k)
+        // }
+       
+document.write('<br>'+'=================================')
+
+        for(let i=1;i<=20;i++){
+            document.write('<br>')
+            if (i==5){
+                document.write('Detected')
+                break
+            }
+            document.write(`Value Of i is ${i}`)
+           
+        }
+        document.write('<br>=========================')
+        for(let i=1;i<=20;i++){
+            document.write('<br>')
+            if (i==5){
+                document.write('Detected')
+                continue
+            }
+            document.write(`Value Of i is ${i}`)
+           
+        }
+        
+    </script>
+</body>
+</html>

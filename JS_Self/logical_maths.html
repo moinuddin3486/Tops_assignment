@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let num=1234222888888
+        let str=String(num)
+        let count=0
+        let max=0
+        let item=0
+        for(i=0;i<str.length;i++){
+            count=0
+                for(let m=0;m<str.length;m++){
+                    if(str[i]==str[m]){
+                        count++
+                    }
+                }
+                if(count>max){
+                    max=count
+                    item=str[i]
+                    break
+                }
+        }
+        // document.write(`${item} is ${max} time`)
+        item=Number(item)
+        max=Number(max)
+
+        document.write(`${item} is ${max} time`)
+
+       
+        // while(num!=0){
+        //     let dig=num%10
+        //     sum+=dig
+        //     num=Math.floor(num/10)
+        //     document.write('<br>'+num)
+            
+        // }
+       
+        
+        // do{
+        //     let dig=num%10
+        //     sum+=dig
+        //     num=Math.floor(num/10)
+        //     document.write('<br>'+num)
+
+        // }while(num!=0)
+        // document.write('<br>addition : '+sum)
+
+
+
+    </script>
+</body>
+</html>
